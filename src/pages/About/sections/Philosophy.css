@@ -1,0 +1,35 @@
+.philosophy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 24px;
+}
+
+.philosophy-item {
+  padding: 8px 4px;
+}
+
+.philosophy-item__index {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.philosophy-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.philosophy-item p {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .philosophy__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+:root {
+  --max-width: 1440px;
+  --max-width-narrow: 820px;
+  --gutter: 28px;
+  --section-pad: clamp(72px, 9vw, 140px);
+
+  --radius-lg: 24px;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --font-logo: 'Syne', 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Single source of truth for color: every component reads these, so
+   toggling [data-theme] on <html> re-themes the whole site at once.
+   Near-black + a vivid terminal green — a developer/code signal tied to
+   Shopify's own brand green, instead of generic SaaS blue or luxury gold. */
+:root[data-theme='light'] {
+  --bg: #fafaf9;
+  --bg-alt: #f0f0ee;
+  --text: #16181a;
+  --text-dim: #5c6066;
+  --accent: #15803d;
+  --accent-hover: #0f6730;
+  --accent-text: #ffffff;
+  --border: rgba(22, 24, 26, 0.12);
+  --border-strong: rgba(22, 24, 26, 0.22);
+  --shadow: 0 20px 40px -20px rgba(22, 24, 26, 0.18);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0a0c;
+  --bg-alt: #151518;
+  --text: #f4f4f5;
+  --text-dim: #9a9aa0;
+  --accent: #4ade80;
+  --accent-hover: #6ee89b;
+  --accent-text: #0a0a0c;
+  --border: rgba(244, 244, 245, 0.12);
+  --border-strong: rgba(244, 244, 245, 0.22);
+  --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.65);
+}
+
+/* Fallback so unstyled-content never shows the wrong palette before the
+   no-FOUC script in index.html sets the real attribute. */
+:root:not([data-theme]) {
+  --bg: #0a0a0c;
+  --bg-alt: #151518;
+  --text: #f4f4f5;
+  --text-dim: #9a9aa0;
+  --accent: #4ade80;
+  --accent-hover: #6ee89b;
+  --accent-text: #0a0a0c;
+  --border: rgba(244, 244, 245, 0.12);
+  --border-strong: rgba(244, 244, 245, 0.22);
+  --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.65);
+}

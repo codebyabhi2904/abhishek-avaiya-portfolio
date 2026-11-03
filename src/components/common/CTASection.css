@@ -1,0 +1,40 @@
+.cta-banner {
+  background: var(--bg);
+  padding-block: clamp(96px, 12vw, 180px);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(640px 320px at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner__inner {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-banner__inner h2 {
+  margin-top: 18px;
+}
+
+.cta-banner__inner p {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  max-width: 480px;
+}
+
+.cta-banner__actions {
+  margin-top: 40px;
+  justify-content: center;
+}

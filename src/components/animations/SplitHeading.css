@@ -1,0 +1,19 @@
+.split-heading {
+  overflow: visible;
+}
+
+.split-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: 1.08;
+}
+
+.split-word__inner {
+  display: inline-block;
+  will-change: transform;
+}
+
+.split-word__inner--accent {
+  color: var(--accent);
+}

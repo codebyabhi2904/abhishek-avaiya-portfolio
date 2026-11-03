@@ -1,0 +1,136 @@
+.featured-projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 7vw, 110px);
+}
+
+.featured-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.featured-row--reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.featured-row--reverse .featured-row__media {
+  order: 2;
+}
+
+.featured-row__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 11;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.featured-row__media:hover {
+  transform: translateY(-4px);
+}
+
+.featured-row__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-row__overlay {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s var(--ease-out);
+}
+
+.featured-row__media:hover .featured-row__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.featured-row__index {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.featured-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.featured-row__industry {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.featured-row__body h3 {
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.3rem);
+  margin-bottom: 16px;
+}
+
+.featured-row__body h3 a:hover {
+  color: var(--accent);
+}
+
+.featured-row__body p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+.featured-row__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 24px;
+}
+
+.featured-row__tech li {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.featured-projects__cta {
+  margin-top: clamp(56px, 7vw, 96px);
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 860px) {
+  .featured-row,
+  .featured-row--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-row--reverse .featured-row__media {
+    order: 0;
+  }
+}

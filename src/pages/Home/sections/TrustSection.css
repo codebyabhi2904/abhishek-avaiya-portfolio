@@ -1,0 +1,26 @@
+.trust {
+  padding-block: clamp(56px, 6vw, 88px);
+}
+
+.trust__note {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.5rem);
+  color: var(--text);
+  max-width: 36ch;
+  margin-bottom: 48px;
+}
+
+.trust__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 760px) {
+  .trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 20px;
+  }
+}

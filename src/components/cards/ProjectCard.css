@@ -1,0 +1,108 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.project-card__media:hover {
+  transform: translateY(-4px);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card--large .project-card__media {
+  aspect-ratio: 16 / 10;
+}
+
+.project-card__media-overlay {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s var(--ease-out);
+}
+
+.project-card__media:hover .project-card__media-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-card__industry {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.project-card__body h3 {
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.8rem);
+}
+
+.project-card__body h3 a:hover {
+  color: var(--accent);
+}
+
+.project-card__body p {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: 46ch;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.project-card__tech li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+}
+
+.project-card__link {
+  margin-top: 8px;
+  width: fit-content;
+}

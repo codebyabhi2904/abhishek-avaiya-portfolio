@@ -1,0 +1,25 @@
+.typewriter__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.95em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -0.15em;
+  animation: typewriter-blink 1s step-end infinite;
+}
+
+@keyframes typewriter-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter__cursor {
+    animation: none;
+  }
+}

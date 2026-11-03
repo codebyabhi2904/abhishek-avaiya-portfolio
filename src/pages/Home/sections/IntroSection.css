@@ -1,0 +1,36 @@
+.intro__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.intro__heading {
+  font-size: clamp(2rem, 1.5rem + 2.3vw, 3.6rem);
+  max-width: 14ch;
+}
+
+.intro__content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro__content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+}
+
+.intro__link {
+  align-self: flex-start;
+  margin-top: 10px;
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .intro__grid {
+    grid-template-columns: 1fr;
+  }
+}

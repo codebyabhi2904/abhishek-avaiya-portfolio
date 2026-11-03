@@ -1,0 +1,19 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, transform 0.2s var(--ease-out), background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(14deg);
+}

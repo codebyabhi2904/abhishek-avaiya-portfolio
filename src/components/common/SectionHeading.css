@@ -1,0 +1,47 @@
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.section-heading__text {
+  max-width: 640px;
+}
+
+.section-heading--center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-heading--center .section-heading__text {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.section-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.section-heading__desc {
+  margin-top: 18px;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+.section-heading--small h2 {
+  font-size: clamp(1.7rem, 1.4rem + 1.4vw, 2.6rem);
+}
+
+@media (max-width: 760px) {
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

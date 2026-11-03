@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0c" />
+
+    <script>
+      // Set the theme before first paint so there is no flash of the wrong
+      // palette. Mirrors the logic in ThemeContext.jsx.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored === 'light' || stored === 'dark'
+            ? stored
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Loaded non-render-blocking: the stylesheet swaps to "all" once fetched,
+         so the page can paint immediately with the fallback font instead of
+         waiting on four font families to download first. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <title>Abhishek Avaiya — Shopify &amp; Shopify Plus Developer</title>
+    <meta
+      name="description"
+      content="Abhishek Avaiya engineers scalable, high-performing Shopify and Shopify Plus experiences — combining technical precision, thoughtful design, and measurable business impact."
+    />
+    <link rel="canonical" href="https://abhishekavaiya.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Abhishek Avaiya" />
+    <meta property="og:title" content="Abhishek Avaiya — Shopify & Shopify Plus Developer" />
+    <meta
+      property="og:description"
+      content="Engineering exceptional Shopify experiences — scalable, high-performing, conversion-focused."
+    />
+    <meta property="og:url" content="https://abhishekavaiya.dev/" />
+    <meta property="og:image" content="https://abhishekavaiya.dev/Abhishek Avaiya Profile Photo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abhishek Avaiya — Shopify & Shopify Plus Developer" />
+    <meta
+      name="twitter:description"
+      content="Engineering exceptional Shopify experiences — scalable, high-performing, conversion-focused."
+    />
+    <meta name="twitter:image" content="https://abhishekavaiya.dev/Abhishek Avaiya Profile Photo.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abhishek Avaiya",
+        "jobTitle": "Shopify & Shopify Plus Developer",
+        "url": "https://abhishekavaiya.dev",
+        "image": "https://abhishekavaiya.dev/Abhishek Avaiya Profile Photo.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/abhishek-avaiya-3707a3272/",
+          "https://github.com/codebyabhi2904"
+        ],
+        "knowsAbout": ["Shopify", "Shopify Plus", "Shopify Liquid", "eCommerce Development"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Abhishek Avaiya",
+        "url": "https://abhishekavaiya.dev"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Required by the Web3Forms submit API to accept the contact form's
+         request as genuine client-side traffic (same script the live site
+         loads) — without it, api.web3forms.com/submit returns a 400. -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>

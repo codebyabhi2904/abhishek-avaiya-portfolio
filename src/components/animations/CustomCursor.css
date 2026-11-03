@@ -1,0 +1,52 @@
+@media (hover: hover) and (pointer: fine) and (min-width: 921px) {
+  html.has-custom-cursor,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button {
+    cursor: none;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor.is-hidden {
+  opacity: 0;
+}
+
+.custom-cursor__dot,
+.custom-cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.custom-cursor__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+}
+
+.custom-cursor__ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  opacity: 0.6;
+  transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out), opacity 0.25s ease,
+    background 0.25s ease;
+}
+
+.custom-cursor__ring.is-hovering {
+  width: 56px;
+  height: 56px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  opacity: 1;
+}

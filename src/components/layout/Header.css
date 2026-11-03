@@ -15,7 +15,7 @@
 
 .site-header--scrolled {
   background: color-mix(in srgb, var(--bg) 88%, transparent);
-  box-shadow: 0 1px 0 0 var(--border), 0 16px 32px -24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 0 0 var(--border), 0 16px 32px -24px rgba(0, 0, 0, 0.35); 
 }
 
 .site-header__inner {

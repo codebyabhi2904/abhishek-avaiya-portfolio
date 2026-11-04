@@ -28,6 +28,8 @@
 
 .case-hero__media {
   margin-top: clamp(40px, 5vw, 64px);
+  max-width: 1100px;
+  margin-inline: auto;
   aspect-ratio: 21 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;

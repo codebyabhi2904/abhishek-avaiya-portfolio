@@ -16,7 +16,7 @@
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Manrope', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
-  --font-logo: 'Syne', 'Space Grotesk', system-ui, sans-serif;
+  --font-logo: 'Unbounded', 'Space Grotesk', system-ui, sans-serif;
 }
 
 /* Single source of truth for color: every component reads these, so
